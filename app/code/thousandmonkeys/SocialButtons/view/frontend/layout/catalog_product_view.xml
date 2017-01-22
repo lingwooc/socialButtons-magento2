@@ -13,7 +13,7 @@
 			<container name="fb-root" htmlTag="div" htmlId="fb-root" />
 		</referenceContainer>
 		<referenceBlock name="head.additional">
-			<block class="Magento\Framework\View\Element\Template" name="social.header" template="thousandmonkeys_SocialButtons::header.phtml"/>
+			<block class="thousandmonkeys\SocialButtons\Block\SocialButtons" name="social.header" template="thousandmonkeys_SocialButtons::header.phtml"/>
 		</referenceBlock>
 		<move element="socialbuttons" destination="box.inner1" before="product.info.review"/>
 	</body>

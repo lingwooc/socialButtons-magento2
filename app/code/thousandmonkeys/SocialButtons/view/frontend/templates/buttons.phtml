@@ -1,9 +1,12 @@
 <?php
 	$currentUrl = $block->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]);
-    $currentUrl = $block->escapeUrl($currentUrl);
+
+    $facebook_share = ($block->showFacebookShare() > 0 ? 'true' : 'false');
+    $facebook_count = $block->getFacebookCount();
+    $google_count = $block->getGPlusCount();
 ?>
 <?php if ($block->showFacebook()):?>
-    <div class="fb-like" data-href="<?php echo $currentUrl ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-href="<?php echo $block->escapeUrl($currentUrl); ?>" data-layout="button<?php echo ($facebook_count>0 ? '_count' : ''); ?>" data-action="like" data-show-faces="true" data-share="<?php echo $facebook_share; ?>"></div>
 <?php endif ?>
 <?php if ($block->showTwitter()):?>
     <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -12,5 +15,5 @@
     <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
 <?php endif ?>
 <?php if ($block->showGPlus()):?>
-    <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+    <div class="g-plusone" data-size="medium" <?php echo ($google_count >0 ? '' : 'data-annotation="none"'); ?> ></div>
 <?php endif ?>

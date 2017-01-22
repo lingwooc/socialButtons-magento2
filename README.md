@@ -14,4 +14,4 @@ Tested and working on magento 2.1.3.
 - php bin/magento setup:static-content:deploy
 
 # Usage
-All of the buttons are disabled initially. Go to Stores/Configuration/thousandmonkeys/Social Buttons to enable each button individually.
+All of the buttons are disabled initially. Go to Stores/Configuration/thousandmonkeys/Social Buttons to enable each button individually. If you want facebook stats create and enter an app id (optional).
