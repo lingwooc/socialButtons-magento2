@@ -1,4 +1,4 @@
-# SocialButton-magento2
+# SocialButtons-magento2
 Free magento2 plugin to place share and like buttons on product pages. Social networks implemented:
 - Facebook
 - Twitter
