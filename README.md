@@ -1,4 +1,4 @@
-# SocialButton-magento2
+# SocialButtons-magento2
 Free magento2 plugin to place share and like buttons on product pages. Social networks implemented:
 - Facebook
 - Twitter
@@ -15,3 +15,4 @@ Tested and working on magento 2.1.3.
 
 # Usage
 All of the buttons are disabled initially. Go to Stores/Configuration/thousandmonkeys/Social Buttons to enable each button individually. If you want facebook stats create and enter an app id (optional).
+
