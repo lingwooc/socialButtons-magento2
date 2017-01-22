@@ -10,7 +10,11 @@
 	<body>
 		<referenceContainer name="content">
 			<block class="thousandmonkeys\SocialButtons\Block\SocialButtons" name="socialbuttons" before="product.info.main"></block>
+			<container name="fb-root" htmlTag="div" htmlId="fb-root" />
 		</referenceContainer>
+		<referenceBlock name="head.additional">
+			<block class="Magento\Framework\View\Element\Template" name="social.header" template="thousandmonkeys_SocialButtons::header.phtml"/>
+		</referenceBlock>
 		<move element="socialbuttons" destination="box.inner1" before="product.info.review"/>
 	</body>
 </page>
