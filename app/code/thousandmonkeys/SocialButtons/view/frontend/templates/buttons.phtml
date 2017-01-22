@@ -1,7 +1,6 @@
 <?php
 	$currentUrl = $block->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]);
     $currentUrl = $block->escapeUrl($currentUrl);
-	$encodedUrl = urlencode($currentUrl);
 ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -20,7 +19,7 @@
   {lang: 'en-GB'}
 </script>
 <?php if ($block->showFacebook()):?>
-    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-href="<?php echo $currentUrl ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 <?php endif ?>
 <?php if ($block->showPinterest()):?>
     <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
