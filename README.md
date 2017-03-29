@@ -5,7 +5,7 @@ Free magento2 plugin to place share and like buttons on product pages. Social ne
 - Pinterest
 - Google+
 
-Tested and working on magento 2.1.3.
+Tested and working on magento 2.1.5.
 
 # Installation
 - Extract over your magento installation.
