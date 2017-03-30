@@ -15,6 +15,6 @@
 		<referenceBlock name="head.additional">
 			<block class="thousandmonkeys\SocialButtons\Block\SocialButtons" name="social.header" template="thousandmonkeys_SocialButtons::header.phtml"/>
 		</referenceBlock>
-		<move element="socialbuttons" destination="box.inner1" before="product.info.review"/>
+		<move element="socialbuttons" destination="product.info.main" after="page.main.title"/>
 	</body>
 </page>

@@ -5,7 +5,7 @@ Free magento2 plugin to place share and like buttons on product pages. Social ne
 - Pinterest
 - Google+
 
-Tested and working on magento 2.1.5.
+Tested and working on magento 2.1.5 & Luma (other themes can and will vary).
 
 # Installation
 - Extract over your magento installation.
@@ -16,3 +16,4 @@ Tested and working on magento 2.1.5.
 # Usage
 All of the buttons are disabled initially. Go to Stores/Configuration/thousandmonkeys/Social Buttons to enable each button individually. If you want facebook stats create and enter an app id (optional).
 
+If you wish to move the buttons override thousandmonkeys/SocialButtons/view/frontend/layout/catalog_product_view.xml in your theme (particularly the move command). You may also need to override the rule in thousandmonkeys/SocialButtons/view/frontend/web/css/social.css to get the facebook buttons aligned.
