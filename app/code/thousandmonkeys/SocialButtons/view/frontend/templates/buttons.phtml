@@ -1,21 +1,38 @@
 <div class="social-buttons">
     <?php
         $currentUrl = $block->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]);
-
+        $productName = $block->getProductName();
         $facebook_share = ($block->showFacebookShare() > 0 ? 'true' : 'false');
         $facebook_count = $block->getFacebookCount();
         $google_count = $block->getGPlusCount();
     ?>
-    <?php if ($block->showFacebook()):?>
-        <div class="fb-like" data-href="<?php echo $block->escapeUrl($currentUrl); ?>" data-layout="button<?php echo ($facebook_count>0 ? '_count' : ''); ?>" data-action="like" data-show-faces="true" data-share="<?php echo $facebook_share; ?>"></div>
-    <?php endif ?>
-    <?php if ($block->showTwitter()):?>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <?php endif ?>
-    <?php if ($block->showPinterest()):?>
-        <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
-    <?php endif ?>
-    <?php if ($block->showGPlus()):?>
-        <div class="g-plusone" data-size="medium" <?php echo ($google_count >0 ? '' : 'data-annotation="none"'); ?> ></div>
+    <?php if ($block->isEmbedded()):?>
+        <?php if ($block->showFacebook()):?>
+            <div class="fb-like" data-href="<?php echo $block->escapeUrl($currentUrl); ?>" data-layout="button<?php echo ($facebook_count>0 ? '_count' : ''); ?>" data-action="like" data-show-faces="true" data-share="<?php echo $facebook_share; ?>"></div>
+        <?php endif ?>
+        <?php if ($block->showTwitter()):?>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <?php endif ?>
+        <?php if ($block->showPinterest()):?>
+            <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
+        <?php endif ?>
+        <?php if ($block->showGPlus()):?>
+            <div class="g-plusone" data-size="medium" <?php echo ($google_count >0 ? '' : 'data-annotation="none"'); ?> ></div>
+        <?php endif ?>
+    <?php else: ?>
+        <ul class="social">
+        <?php if ($block->showFacebook()):?>
+            <li><a href="https://www.facebook.com/sharer.php?u=<?php echo $block->escapeUrl($currentUrl); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>   
+        <?php endif ?>
+        <?php if ($block->showTwitter()):?>
+            <li><a href="https://twitter.com/share?text=<?php echo $block->escapeHtml($productName); ?>&url=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <?php endif ?>
+        <?php if ($block->showPinterest()):?>
+            <li><a href="http://pinterest.com/pin/create/button/?url=<?php echo $block->escapeUrl($currentUrl); ?>&description=<?php echo $block->escapeHtml($productName); ?>"><i class="fa fa-pinterest"></i></a></li>
+        <?php endif ?>
+        <?php if ($block->showGPlus()):?>
+            <li><a href="https://plus.google.com/share?url=<?php echo $block->escapeUrl($currentUrl); ?>"><i class="fa fa-google-plus"></i></a></li>
+        <?php endif ?>
+        </ul>
     <?php endif ?>
 </div>

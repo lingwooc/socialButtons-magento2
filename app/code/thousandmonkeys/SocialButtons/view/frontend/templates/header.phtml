@@ -6,20 +6,21 @@
         $facebook_appid = '&appId='.$facebook_appid;
     }
 ?>
+<?php if (!$block->isEmbedded()):?>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8<?php echo $block->escapeQuote($facebook_appid); ?>";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8<?php echo $block->escapeQuote($facebook_appid); ?>";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<script
-    type="text/javascript"
-    async defer
-    src="//assets.pinterest.com/js/pinit.js"
-></script>
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: 'en-GB'}
-</script>
+    <script
+        type="text/javascript"
+        async defer
+        src="//assets.pinterest.com/js/pinit.js"
+    ></script>
+    <script src="https://apis.google.com/js/platform.js" async defer>
+    {lang: 'en-GB'}
+    </script>
+<?php endif?>
