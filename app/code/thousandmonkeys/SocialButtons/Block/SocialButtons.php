@@ -7,7 +7,6 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 	protected $_template = 'buttons.phtml';
 
 	protected $_scopeConfig;
-	protected $_embedded;
 	protected $_registry;
 	private $product;
 	/**
@@ -17,7 +16,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 	 */
 	public function __construct(
 		\Magento\Framework\View\Element\Template\Context $context,
-		Magento\Framework\Registry $registry ,
+		\Magento\Framework\Registry $registry ,
 		array $data = []
 	) {
 		parent::__construct($context, $data);
@@ -31,7 +30,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
     private function getProduct()
     {
         if (is_null($this->product)) {
-            $this->product = $this->registry->registry('product');
+            $this->product = $this->_registry->registry('product');
 
             if (!$this->product->getId()) {
                 throw new LocalizedException(__('Failed to initialize product'));
@@ -48,9 +47,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 
 	public function isEmbedded()
 	{
-		if(!$_embedded)
-			$this->_embedded$this->_scopeConfig->getValue('socialbuttons/embedded/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-		return $_embedded;
+		return $this->_scopeConfig->getValue('socialbuttons/embedded/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 	}
 	
 	public function showFacebook()

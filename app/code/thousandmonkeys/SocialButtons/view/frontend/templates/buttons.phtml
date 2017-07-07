@@ -20,6 +20,7 @@
             <div class="g-plusone" data-size="medium" <?php echo ($google_count >0 ? '' : 'data-annotation="none"'); ?> ></div>
         <?php endif ?>
     <?php else: ?>
+        <div class="social-message">Share:</div>
         <ul class="social">
         <?php if ($block->showFacebook()):?>
             <li><a href="https://www.facebook.com/sharer.php?u=<?php echo $block->escapeUrl($currentUrl); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>   
@@ -28,7 +29,7 @@
             <li><a href="https://twitter.com/share?text=<?php echo $block->escapeHtml($productName); ?>&url=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
         <?php endif ?>
         <?php if ($block->showPinterest()):?>
-            <li><a href="http://pinterest.com/pin/create/button/?url=<?php echo $block->escapeUrl($currentUrl); ?>&description=<?php echo $block->escapeHtml($productName); ?>"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="http://pinterest.com/pin/create/button/?url=<?php echo $block->escapeUrl($currentUrl); ?>&description=<?php echo $productName; ?>"><i class="fa fa-pinterest"></i></a></li>
         <?php endif ?>
         <?php if ($block->showGPlus()):?>
             <li><a href="https://plus.google.com/share?url=<?php echo $block->escapeUrl($currentUrl); ?>"><i class="fa fa-google-plus"></i></a></li>
