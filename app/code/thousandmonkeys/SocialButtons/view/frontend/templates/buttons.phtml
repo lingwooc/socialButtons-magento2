@@ -6,7 +6,7 @@
         $facebook_count = $block->getFacebookCount();
         $google_count = $block->getGPlusCount();
     ?>
-    <?php if ($block->isEmbedded()):?>
+    <?php if (!$block->isLocal()):?>
         <?php if ($block->showFacebook()):?>
             <div class="fb-like" data-href="<?php echo $block->escapeUrl($currentUrl); ?>" data-layout="button<?php echo ($facebook_count>0 ? '_count' : ''); ?>" data-action="like" data-show-faces="true" data-share="<?php echo $facebook_share; ?>"></div>
         <?php endif ?>
@@ -23,16 +23,16 @@
         <div class="social-message">Share:</div>
         <ul class="social">
         <?php if ($block->showFacebook()):?>
-            <li><a href="https://www.facebook.com/sharer.php?u=<?php echo $block->escapeUrl($currentUrl); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>   
+            <li><a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>   
         <?php endif ?>
         <?php if ($block->showTwitter()):?>
             <li><a href="https://twitter.com/share?text=<?php echo $block->escapeHtml($productName); ?>&url=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
         <?php endif ?>
         <?php if ($block->showPinterest()):?>
-            <li><a href="http://pinterest.com/pin/create/button/?url=<?php echo $block->escapeUrl($currentUrl); ?>&description=<?php echo $productName; ?>"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>&description=<?php echo $productName; ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
         <?php endif ?>
         <?php if ($block->showGPlus()):?>
-            <li><a href="https://plus.google.com/share?url=<?php echo $block->escapeUrl($currentUrl); ?>"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://plus.google.com/share?url=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
         <?php endif ?>
         </ul>
     <?php endif ?>

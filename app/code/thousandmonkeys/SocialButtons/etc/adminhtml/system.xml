@@ -16,10 +16,10 @@
             <label>Social Buttons</label>
             <tab>thousandmonkeys</tab>
             <resource>Thousandmonkeys_SocialButtons::config</resource>
-            <group id="embedded" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Embedded</label>
+            <group id="local" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Local widgets</label>
                 <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Show embedded widgets (load from networks servers)</label>
+                    <label>Show local widgets (load nothing from social networks servers). This requires your theme to load fontawesome (http://fontawesome.io/).</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>

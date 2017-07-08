@@ -45,9 +45,9 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
         return $this->getProduct()->getName();
     }
 
-	public function isEmbedded()
+	public function isLocal()
 	{
-		return $this->_scopeConfig->getValue('socialbuttons/embedded/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+		return $this->_scopeConfig->getValue('socialbuttons/local/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 	}
 	
 	public function showFacebook()
