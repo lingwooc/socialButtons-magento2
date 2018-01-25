@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
-<!-- 
+<!--
 /**
 * Copyright © 2015 PlazaThemes.com. All rights reserved.
 
 * @author PlazaThemes Team <contact@plazathemes.com>
 */
 -->
-<config 
+<config
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
     <system>
         <tab id="thousandmonkeys" translate="label" sortOrder="100">
-            <label>Thousandmonkeys</label>
+            <label>ThousandMonkeys</label>
         </tab>
         <section id="socialbuttons" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Social Buttons</label>
             <tab>thousandmonkeys</tab>
-            <resource>Thousandmonkeys_SocialButtons::config</resource>
+            <resource>ThousandMonkeys_SocialButtons::config</resource>
             <group id="local" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Local widgets</label>
                 <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">

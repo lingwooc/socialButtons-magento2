@@ -11,7 +11,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Thousandmonkeys_SocialButtons::config" title="Extension config example" sortOrder="50" />
+                            <resource id="ThousandMonkeys_SocialButtons::config" title="Extension config example" sortOrder="50" />
                         </resource>
                     </resource>
                 </resource>

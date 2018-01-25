@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../vendor/magento/framework/Module/etc/module.xsd">
   <head>
-    <css src="thousandmonkeys_SocialButtons::css/social.css" />
+    <css src="ThousandMonkeys_SocialButtons::css/social.css" />
   </head>
 </page>
