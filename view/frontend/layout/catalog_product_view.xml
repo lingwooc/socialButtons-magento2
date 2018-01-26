@@ -5,15 +5,15 @@
  * See COPYING.txt for license details.
  */
 -->
-<page 
+<page
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<body>
 		<referenceContainer name="content">
-			<block class="thousandmonkeys\SocialButtons\Block\SocialButtons" name="socialbuttons" before="product.info.main"></block>
+			<block class="ThousandMonkeys\SocialButtons\Block\SocialButtons" name="socialbuttons" before="product.info.main"></block>
 			<container name="fb-root" htmlTag="div" htmlId="fb-root" />
 		</referenceContainer>
 		<referenceBlock name="head.additional">
-			<block class="thousandmonkeys\SocialButtons\Block\SocialButtons" name="social.header" template="thousandmonkeys_SocialButtons::header.phtml"/>
+			<block class="ThousandMonkeys\SocialButtons\Block\SocialButtons" name="social.header" template="ThousandMonkeys_SocialButtons::header.phtml"/>
 		</referenceBlock>
 		<move element="socialbuttons" destination="product.info.main" after="page.main.title"/>
 	</body>
