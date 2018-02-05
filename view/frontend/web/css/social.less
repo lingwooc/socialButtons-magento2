@@ -1,53 +1,58 @@
 .fb-like.fb_iframe_widget {
-    top: -2px;
+  top: -5px;
 }
+
 .social-buttons {
-    .social-message {
-        display: inline-block;
-        vertical-align: middle;
-        height: 35px;
-        font-weight: 700;
-        padding-right: 10px;
-    }
-    ul.social { 
+  .pinterest {
+    position: relative;
+    top: -6px;
+  }
+  .social-message {
+    display: inline-block;
+    vertical-align: middle;
+    height: 35px;
+    font-weight: 700;
+    padding-right: 10px;
+  }
+  ul.social {
+    list-style-type: none;
+    overflow: auto;
+    display: inline-block;
+    li {
+      &:before {
+        display: none;
+      }
+      float: left;
+      margin: 0;
+      a i {
         list-style-type: none;
-        overflow: auto;
-        display: inline-block;
-        li {
-            &:before{
-                display: none;
-            }
-            float: left;
-            margin: 0;
-            a i{
-                list-style-type: none;
-                float: left;
-                background: #205D7A;
-                color: #fff;
-                width: 30px;
-                height: 30px;
-                border-radius: 15px;
-                font-size: 20px;
-                text-align: center;
-                margin-right: 10px;
-                padding-top: 13%;
-                transition: all 0.2s ease-in-out;
-                &:hover {
-                    opacity: .7;
-                }
-            }
+        float: left;
+        background: #205D7A;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 10px;
+        padding-top: 13%;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          opacity: .7;
         }
-        .fa-facebook {
-            background:#3b5998
-        }
-        .fa-twitter {
-            background:#00aced
-        }
-        .fa-google-plus {
-            background:#d34836
-        }
-        .fa-pinterest {
-            background:#bd081c;
-        }
+      }
     }
+    .fa-facebook {
+      background: #3b5998
+    }
+    .fa-twitter {
+      background: #00aced
+    }
+    .fa-google-plus {
+      background: #d34836
+    }
+    .fa-pinterest {
+      background: #bd081c;
+    }
+  }
 }
