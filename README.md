@@ -8,7 +8,7 @@ Free magento2 plugin to place share and like buttons on product pages. Social ne
 Tested and working on magento 2.1.6 & Luma (other themes can and will vary).
 
 # Installation
-- Extract into app/code/ThousandMonkeys/SocialButtons
+- composer require thousandmonkeys/m2-socialbuttons-module
 - php bin/magento setup:upgrade
 - php bin/magento setup:di:compile
 - php bin/magento setup:static-content:deploy
