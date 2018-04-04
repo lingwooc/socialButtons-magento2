@@ -1,6 +1,6 @@
 <?php
 
-namespace thousandmonkeys\SocialButtons\Block;
+namespace ThousandMonkeys\SocialButtons\Block;
 
 class SocialButtons extends \Magento\Framework\View\Element\Template {
 
@@ -49,7 +49,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/local/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 	}
-	
+
 	public function showFacebook()
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/facebook/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
@@ -64,7 +64,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/facebook/appid', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 	}
-	
+
 	public function getFacebookCount()
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/facebook/count', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
@@ -74,7 +74,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/twitter/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 	}
-	
+
 	public function showPinterest()
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/pinterest/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
@@ -84,7 +84,7 @@ class SocialButtons extends \Magento\Framework\View\Element\Template {
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/google/enable', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 	}
-		
+
 	public function getGPlusCount()
 	{
 		return $this->_scopeConfig->getValue('socialbuttons/google/count', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);

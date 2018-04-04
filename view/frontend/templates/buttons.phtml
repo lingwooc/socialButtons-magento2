@@ -1,3 +1,7 @@
+<?php
+/* @var ThousandMonkeys\SocialButtons\Block\SocialButtons $block */
+?>
+
 <div class="social-buttons">
     <?php
         $currentUrl = $block->getUrl('*/*/*', ['_current' => true, '_use_rewrite' => true]);
@@ -14,7 +18,9 @@
             <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         <?php endif ?>
         <?php if ($block->showPinterest()):?>
-            <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
+            <span class="pinterest">
+                <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"> </a>
+            </span>
         <?php endif ?>
         <?php if ($block->showGPlus()):?>
             <div class="g-plusone" data-size="medium" <?php echo ($google_count >0 ? '' : 'data-annotation="none"'); ?> ></div>
@@ -23,7 +29,7 @@
         <div class="social-message">Share:</div>
         <ul class="social">
         <?php if ($block->showFacebook()):?>
-            <li><a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>   
+            <li><a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
         <?php endif ?>
         <?php if ($block->showTwitter()):?>
             <li><a href="https://twitter.com/share?text=<?php echo $block->escapeHtml($productName); ?>&url=<?php echo urlencode($block->escapeUrl($currentUrl)); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
